@@ -20,11 +20,20 @@ public class ObstacleCourse {
     {
         
         JFrame window = new JFrame("AI DEMO");
-        window.setContentPane(new TestScreen());
+        MazeScreen ms = new MazeScreen();
+        try{
+            ms.update();
+        }catch(Exception e)
+        {
+            
+        }
+        window.setContentPane(new Display("maze.png"));
         window.setVisible(true);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setResizable(false);
         window.pack();
+        
+        
         
     }
     
